@@ -1,0 +1,126 @@
+4;
+1. ¿En qué se convierten los componentes una vez escaneados para poder ser inyectados en diferentes partes de la aplicación?
+;a) En Beans
+b) En services
+c) En JSPs
+d) En Entities
+2. ¿Cuál es la diferencia entre un @Controller y un @RestController?
+a) ólo los RestControllers pueden retornas plantillas
+;b) Un Controller retorna referencias a plantillas y un RestController retorn objetos
+c) Ambos pueden retornar tanto plantillas como objetos
+d) Solo los Controllers pueden retornar objetos
+3. ¿En qué tipo de componentes se implementa la lógica de negocio de la aplicación según el patrón N-Capas?
+a) En los controladores
+b) En los controladores y en los servicios
+;c) En los servicios
+d) En los repositorios
+4. ¿Qué diferencia hay entre el operador $ y operador # de thymeleaf?
+;a) # manipula utilidades y mensajes, $ manipula expresiones
+c) # manipula utilidades, mensajes y expresiones, $ manipula utilidades
+d) # manipula expresiones, $ manipula utilidades y mensajes
+e) # manipula utilidades, $ manipula mensajes y expresiones
+5. ¿Qué anotación de Spring Boot se incluye en la clase principal que inicia la aplicación?
+a;) @SpringBootAplication
+b) @SpringBootStart
+c) @SpringBoot
+d) @SpringApplication
+6. ¿Cuál o cuales de las siguientes anotaciones NO se corresponden con componentes: @Controller, @Service, @Bean, @Entity, @Configuration?
+a) @Bean, @Entity y @Configuration
+;b) @Bean y @Entity
+c) @Controller, @Service y @Entity
+d) @Controller, @Entity y @Configuration
+7. Para poder usar objetos de las clases que aparecen en el siguiente fragmento de código se usaría: @Configuration Public class WebSecurityConfig extends WebSecurityConfigurerAdapter { @Bean Public BCryptPasswordEncoderbCryptPasswordEncoder(){ … }
+a) IoC
+b) Instanciación manual
+c) IoC e Instalación manual en ambos
+;d) IoC e Instalación manual según el caso
+8. ¿Según la siguiente configuración que se requiere para que una petición pueda acceder a la URL/persona/detalles? http.authorizeRequests().antMatchers(“/persona/**”).authenticated().antMatchers(“/persona/borrar”).hasAuthority(“ROLE_USUARIO”).antMatchers(“/persona/detalles”).hasAuthority(“ROLE_ADMIN”).anyRequest().permitAll()
+;a) Se requiere que el usuario esté autenticado.
+b) Se requiere que el usuario tenga ROLE_ADMIN.
+c) Se requiere que el usuario tenga el role ROLE_USUARIO
+d) No se requiere estar autenticado
+9. ¿Cuáles son los 3 parámetros mas significativos de la clase Userdetails de Spring security?
+a) Username, el password y un objeto genérico de almacenaje
+b) Username, la URL permitida y el HashSet de autorizaciones
+c) Username, un objeto genérico de almacenaje y el HashSet de auorizaciones
+;d) Username, el password y el HashSet de autorizaciones
+10. ¿Con qué propósito se usa comúnmente la anotación @Bean?
+;a) Para declarar Objetos de configuración o funcionalidad transversal
+b) Para declarar servicios y objetos de funcionalidad transversal
+c) Para declarar controladores y objetos de configuración
+d) Para declarar controladores, servicios y objetos de persistencia
+11. Desde Thymeleaf, ¿cómo se colocaría el valor de un mensaje con clave “tienda.titulo” en un elemento H1? Incluir únicamente código thymeleaf
+a) <h1 th:text=”{tienda.titulo}”></h1>
+;b) <h1 th:text=”${tienda.titulo}”></h1>
+c) <h1 th:text=”#{tienda.titulo}”></h1>
+d) <h1 th:text=”tienda.titulo”></h1>
+12. ¿Quién recibe antes una petición, un controlador o un interruptor?
+a) El controlador recibe siempre antes la petición y siempre tiene que comprobar si el interceptor le da permiso de ejecución
+b) El controlador recibe siempre antes la petición, pero no necesita pedir permiso de ejecución al interceptor.
+c) El controlador recibe siempre antes la petición y algunas veces necesita pedir permiso de ejecución al interceptor
+;d) El interceptor recibe antes la petición siempre
+13. Nombra dos atributos contenidos en el objeto Pageable.
+a) Número de elementos por página y Número de la página actual
+b) Numero de la página actual y Número de páginas solicitadas.
+;c) Número de página solicitada y Número de elementos por página.
+d) Número de páginas solicitadas y total de páginas.
+14. ¿Quién crea, dónde se almacena y como se traza un objeto de sesión?
+a) Se crea a solicitud del servidor, se almacena en el cliente y se suele trazar basado en una cookie única para cada usuario que queda almacenada en su navegador.
+b) Se crea a solicitud del cliente, se almacena en el servidor y se suele trazar basado en una cookie compartida por varios usuarios que queda almacenada en sus respectivos navegadore.
+;c) Se crea a solicitud del servidor, se almacena en el servidor y se suele trazar basado en una cookie única para cada usuario que queda almacenada en su navegador.
+d) Se crea a solicitud del cliente, se almacena en el cliente y se suele traza basado en una cookie única para cada usuario que queda almacenada en su navegador.
+15. El siguiente Servicio debería permitir que un usuario vea los detalles de una de sus propias asignaturas, ¿hay algún aspecto de seguridad que puede ser mejorado? @Service public MiServicio{ public Asignatura getMiAsignatura(Long id){ Asignatura asignatura = asignaturasRepository.findOne(id); return asignatura;	} }
+a) No. El código es Seguro
+;b) Sí. No parece que el servicio este comprobando si la asignatura pertenece al usuario.
+c) Sí. Sería necesario incluir la etiqueta @Transactional en el método getMiAsignatura.
+d) Si. Sería necesario sobrecargar el método findOne con la etiqueta @Transactional.
+15. ¿Por defecto, cómo tiene ligar la instanciación de un objeto que se inyecta en varias partes del código de un mismo proyecto?
+;a) Se crea el objeto, y se inyecta la misma referencia a dicha instancia en todas las partes.
+b) Según el punto del código donde se inyecte seguirá un modelo Singleton o no.
+c) Según el tipo de componente en que se inyecte seguirá un modelo Singleton o no.
+d) Se crea un objeto diferente cada vez que se inyecta el objeto en las partes citadas.
+16. Explica en qué consisten las pruebas de Interface en Web Testing
+a) Consiste en la prueba de la usabilidad del interfaz gráfico de la aplicación.
+b) Consiste en la prueba de la funcionalidad del interfaz gráfico de la aplicación.
+;c) Consiste en la prueba de las conexiones entre el servidor de aplicaciones y otros servidores.
+d)Consiste en la prueba de las conexiones de cliente del interfaz grafico y otros elementos remotos.
+17. Cuál es la diferencia entre los test de carga y los test estrés:
+a) Los test de carga prueban valores limite de funcionamiento mientras que los de estrés prueban valores de carga alta pero no limite.
+b) Los test de carga prueban valores de carga normal, nunca alta, mientras que los de estrés prueban valores limite.
+;c) Los test de cargan prueban valores de carga normales y altos, mientras que los de estrés prueban valores límite. 
+d) Los test de carga prueban valores de carga normal, nunca alta, mientras que los de estrés prueban valores límite y también normales.
+18. Indica cuales son casos de prueba de compatibilidad válidos en proyectos web:
+a) Navegadores, Arquitecturas y frameworks de webtesting.
+;b) Navegadores, SSOO Y Disp. Móviles.
+c) Navegadores, frameworks de webstesting y Disp. Móviles.
+d) Frameworks de webtesting, SSOO, Disp. Móviles.
+19. Donde se ejecutan los servlets...
+a) En una maquina virtual Java embedida en el navegador
+b) Como un programa Java standalone en el SSOO del cliente tras descargarse
+c) En el contenedor de Servlets localizado en el cliente
+;d) En el contenedor de Servlets localizado en el servidor de aplicaciones
+20. Un contenedor recibe 2 peticiones desde dos IPs difetentes para el mismo Servlet ¿Cuantas instancias se crearan?
+a) Ninguna
+;b) Una
+c) Dos
+d) Mas de dos
+21. Un servlet recibe 10 peticiones simultaneas de la misma IP, ¿Cuantos hilos se ejecutaran desde que se crea el servlet?
+a) 1 hilo
+;b) 10 hilos
+c) 11 hilos
+d) Mas de 11 hilos
+22. Donde se ejecuta un JSP
+a) Es interpretado y ejecutado en el navegador
+;b) es compilado en un servlet y el servlet es enviado al cliente para su ejecucion
+c) es compilado a un servlet y el servlet es ejecutado dentro del contenedor
+d) es interpretado directamente por el motor de JEE
+23. Ambito JEE. Cual/es de las siguientes afirmaciones es correcta
+a) El ambito contexto siempre dura menos que el resto
+;b) El ambito sesion dura mas que el request
+c) El ambito request suele durar mas que el contexto
+d) El ambito sesion puede durar mas que el resto
+24. Servlets & JSPs, indica la respuesta correcta
+a) Servlets son mas adecuados para presentacion que JSP
+b) JSP y Servlets son igualmente adecuados para presentacion
+c) JSP es mas adecuado para logica de negocio
+;d) JSP son mas adecuados para presentacion

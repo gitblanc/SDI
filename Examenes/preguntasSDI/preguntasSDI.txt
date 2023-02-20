@@ -1,0 +1,176 @@
+4;
+1. Es un framwork de desarrollo de aplicaciones web minimalista y flexible para Node JS:
+a) NPM
+;b) express
+c) Swig
+d) Javascript
+2. En una aplicación NodeJS, el fichero package.json contiene
+;a) La configuración y los metadatos de la aplicación
+b) El nombre del servidor
+;c) Las dependencias
+d) Todos los focheros JS de la aplicación
+3. En NodeJS la función require se utiliza para:
+a) Crear una nueva aplicación Node 
+b) Denifir módulos
+c) Eliminar módulos de la aplicación
+;d) Importar módulos
+4. Cómo se denominan las funciones que se ejecutan cuando se recibe la petición en una app Node?
+a) App
+;b) Handler
+c) Routing
+d) Module
+5. Forma de declarar un módulo en NodeJS
+;a) module.exports=function(){...}
+b) module.imports=function() {...}
+;c) module.exports={...}
+d) module.require=function(){...}
+6. Forma de incluir un módulo en NodeJS
+a) module.require=function(){...}
+;b) require("./routes/users.js"){app}
+;c) var express=require('express')
+d) module.import={...}
+7. Para obtener los valores de los parámetros enviados en una petición POST en NodeJS se utiliza
+;a) req.body.<clave_parámetro>
+b) req.params.<clave_parámetro>
+c) req.query.<clave_parámetro>
+d) req.form.<clave_parámetro>
+8. Para obtener los valores de los parámetros de una petición GET en NOdeJS se utiliza
+a) req.body.<clave_parámetro>
+;b) req.params.<clave_parámetro>
+;c) req.query.<clave_parámetro>
+d) ree.form.query.<clave_parámetro
+9. Una plantilla Swig recibe un atributo con clave "nombre" ¿Cómo se insertaría el valor de ese atributo en un elemento H1?
+a) <h1>{nombre}</h1>
+;b) <h1>{{nombre}}</h1>
+c) <h1>${nombre}</h1>
+d) <h1>#{nombre}</h1>
+10. Proceso que permite comprobar si un usuario tiene permiso para acceder a ciertas URLs de una aplicación
+;a) Atorización
+b) Autenticación
+c) Enrutamiento
+d) Canal Seguro
+11. Es un módulo que permite cifrar y descrifrar información en NodeJS
+a) sha256
+;b) crypto
+c) createHmac
+d) require
+12. Es una de las principales ventajas de MongoDB
+a) Ideal para almacenar datos estructurados
+b) Muy potente en el manejo de transacciones
+;c) No necesita definir un esquema previo
+d) Soporte flexible para la definición de relaciones entre entidades 
+13. En MongoDB, una coleción:
+a) Define la estrutura de los elementos.
+b) Cada documento se almacena como una colección.
+;c) Almacena documentos que pueden tener estructuras diferentes
+d) No existen los documentos
+14. ¿Cuál sería la mejor alternativa para utilizar un módulo desde otros módulos de una aplicación Node
+a) Obtener el objeto/función siempre que se vaya a utilizar el módulo
+;b) Obtener el objeto/función una vez y enviarlo como parámetro a otros módulos
+c) Obtener el objeto/función y almacenarlo en variables de la app.
+d) Obtener el objeto/función y hacer la respuestas a y c a la vez
+15. Cuál es la principal diferencia al definir un módulo como un objeto y no como una clase o función en una aplicación NodeJS
+;a) Al incluir el módulo varias veces, todos retornan la referencia al mismo objeto.
+b) Al incluir el módulo varias veces, todos retornan la referencia a diferentes objetos.
+c) Al incluir el módulo varias veces, No hay diferencia al definir módulos como clases, funciones u objetos.
+d) No se debe definir un módulo varias veces
+16. Cuál es el objetivo principal de los servicios web?
+;a) Permitir la interoperabilidad entre aplicaciones
+b) Permitir un acoplamiento fuerte entre aplicaciones
+c) Permitir la comunicación sólo entre aplicaciones desarrolladas en el mismo lenguaje
+d) Todos los anteriores
+17. Por qué los servicios web son adecuados para entornos web?
+a) Emplean tecnologías estándares como CORBA; RMI; DCOM; ...
+;b) Emplean tecnologías estándares como HTTP; SOAP; XML; JSON; ...
+c) No son escalables y no permite la computación distribuida.
+d) Ninguna de las anteriores
+18. ¿En qué consiste el principio HATEOAS de una API REST?
+;a) Los mensajes deben contener enlaces a otros recursos de la API
+b) La API tiene una sintaxis universal para identificar los recursos(URI)
+c) Los recursos deben ser declarados como cacheables o no cacheables
+d) Las URLS deben ser coherentes
+19. ¿En qué filosofía se basa REST?
+a) Se basa en la llamada a procedimientos/funciones remotas
+b) Se en que un mismo recurso solo puede representarse en un único formato.
+;c) Se basa en una filosofía orientada a recursos
+d) Seguridad
+20. Es un estándar basado en XML para el intercambio de información entre aplicaciones en entornos descentralizados y distribuidos
+;a) SOAP
+b) WSDL
+c) UDDI
+d) URI
+21. Se utiliza para describir la funcionalidad que proporciona un servicios web SOAP
+a) ENVELOPE
+;b) WSDL
+c) UDDI
+d) URI
+22. Los servicios web SOAP permiten el intercambio de información en formato:
+a) JSON
+;b) XML
+c) XML y JSON
+d) Binario
+23. Sección en la que se añade información realitva a la autenticación o a un ID de transacción de un sobre SOAP
+a) Body
+;b) Header
+c) Envelope
+d) Footer
+24. ¿Qué es NodeJS
+a) Un servidor web multiplataforma
+b) Un lenguaje de programación
+c) Un Framework que permite ejecutar JS del lado del servidor
+;d) Una plataforma de software que permite ejecutar JS del lado del servidor
+25. ¿Cómo gestiona NodeJs las operaciones de I/O?
+a) De forma síncrona y sin bloqueo
+;b) De forma asíncrona y sin bloqueo
+c) De forma asíncrona y sólo se bloquean algunas operaciones
+d) De forma síncrona, asíncrona y con bloqueo
+26. ¿Qué tipo de escalabilidad usa NodeJs para las aplicaciones?
+;a) Horizontal
+b) Vertical
+c) Transversal
+d) Perpendicular
+27. NodeJs mejora la concurrecia porque su arquitectura se basa:
+a) Ejecución multihilo con un bucle de eventos
+b) Ejecución multihilo y modelo I/P asíncrono
+;c) Un solo hilo de ejecución con bucle de eventos
+d) Un solo hilo de ejecución sin bucle de eventos
+28. Son características de una comunicación asíncrona
+;a) Las operaciones no son bloqueantes
+b) Las operaciones e ejecutan de forma secuencial
+c) Las operaciones son bloqueantes
+d) Se realiza mediante el sistema de callback y/o promesas
+29. Es un mecanismo que le permite a una aplicación realizar transferencias seguras de datos en dominios cruzados ente navegadores y servidores Web.
+a) JSON
+b) AJAX
+;c) CORS
+d) URI
+30. Una petición web a un recurso REST
+a) Debe retornar un código de respuesta estándar
+b) Debe retornar una respuesta en formato estándar
+;c) Las respuestas 1 y 2 son correctas
+d) Las respuestas 1 y 2 son incorrectas
+31. El encabecado de respuesta incia si los recursos de la respuesta pueden ser compatibles con una URL dada.
+a) Access-Control-Allow-Crendentials
+b) Access-Control-Allow-Methods
+;c) Access-Control-Allow-Origin
+d) Access-Control-Allow-Source
+32. ¿Qué es JSON?
+;a) Es un formato ligero de almacenamiento e intercambio de datos.
+b) Es un formato que sólo se puede usar con Javascript
+c) Es un formato menos eficiente que XML
+d) Es un sublenguaje de NodeJS
+33. Si un cliente envía una petición a localhost:8080/coche/borrar, (escritas en orden el el código) cuál se ejecutará antes
+;a) app.get('/coche/*'),function{...}
+b) app.get('/coche/:id'),function{...}
+c) app.get('/coche/borrar'),function{...}
+d) Ninguna es correcta
+34. Existe alguna diferencia entre req.body y req.query?
+a) No.
+;b) Sí, req.body para peticiones POST y req.query para GET
+c) No,  ambos se refieren a lo mismo
+d) Sí, req.body para peticiones GET y req.query para POST
+35. De qué dos formas se puede escalar una aplicación
+;a) Vertical y Horizontal
+b) Vertical y Perpendicular
+c) Horizontal y Transversal
+d) Transversal y Perpendicular
