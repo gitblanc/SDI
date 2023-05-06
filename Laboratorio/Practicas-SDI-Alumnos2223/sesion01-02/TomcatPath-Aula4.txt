@@ -1,0 +1,6 @@
+La instalación de Tomcat9.0.56 en la sala 4 puede encontrarse el siguient Path (que está oculto parcialmente), pero puede usarse en la configuración de  IntellJ:
+30/01/2023
+C:\Users\Public\Desktop\Software\apache-tomcat-9.0.56
+31/01/2023 (Enrique)
+Parece que se ha cambiado a la carpeta:
+C:\apache-tomcat-9.0.41
