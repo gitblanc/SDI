@@ -45,6 +45,62 @@ class ColorPrinter:
         print(color + text + bcolors.ENDC)
 
 
+
+class RandomIndex:
+    def __init__(self, number_of_questions):
+        self.number_of_questions = number_of_questions
+    
+    def first_index(self):
+        return randrange(start=0, stop=self.number_of_questions)
+    
+    def next_index(self):
+        return randrange(start=0, stop=self.number_of_questions)
+    
+    def restart(self):
+        pass
+    
+class RandomIndexNoRepetition:
+    def __init__(self, number_of_questions):
+        self.number_of_questions = number_of_questions
+        self.indexes = {}
+    
+    def first_index(self):
+        index = randrange(start=0, stop=self.number_of_questions)
+        self.indexes[index] = True
+        return index
+    
+    def next_index(self):
+        index = randrange(start=0, stop=self.number_of_questions)
+        while index in self.indexes:
+            index = randrange(start=0, stop=self.number_of_questions)
+        self.indexes[index] = True
+        if(len(self.indexes) == self.number_of_questions):
+            self.restart()
+        return index
+    
+    def restart(self):
+        self.indexes = {}
+
+class SequentialIndex:
+    def __init__(self, number_of_questions):
+        self.number_of_questions = number_of_questions
+        self.index = 0
+    
+    def first_index(self):
+        return 0
+    
+    def next_index(self):
+        returnIndex = self.index + 1
+        self.index = returnIndex
+        if returnIndex == self.number_of_questions - 1:
+            self.restart()
+        return returnIndex
+    
+    def restart(self):
+        self.index = -1
+    
+
+
 def delete_answer(respuesta):
     return respuesta.replace(";", "")
 
@@ -67,19 +123,35 @@ def load_preguntas():
         preguntas.append(Pregunta(correctIndex, list( map(delete_answer, respuestas)), lines[i].replace("\n","")))
     return preguntas
 
+def load_indexmode():
+    print("Selecciona orden de preguntas: ")
+    print("1. Aleatorio")
+    print("2. Aleatorio sin repeticion")
+    print("3. Secuencial")
+    mode = input("Modo: ")
+    if mode == "1":
+        return RandomIndex(len(preguntas))
+    elif mode == "2":
+        return RandomIndexNoRepetition(len(preguntas))
+    elif mode == "3":
+        return SequentialIndex(len(preguntas))
+    else:
+        print("Modo inválido")
+        return load_indexmode()
+
 ##Inicio
 preguntas = load_preguntas()
+modoIndex = load_indexmode()
 
 print("Todas las preguntas procesadas! Comenzando:")
 marks=Marks()
 playing = True
 acertadas = 0
 totales = 0
+index = modoIndex.first_index()
 while (playing):
-    index = randrange(start=0, stop=len(preguntas))
     pregunta = preguntas[index]
     ColorPrinter.print(bcolors.BOLD, pregunta.enunciado)
-    
     for respuesta in pregunta.respuestas:
         print(respuesta)
     answer = input("Respuesta: ")
@@ -96,6 +168,7 @@ while (playing):
             for i in pregunta.respuestasCorrectas:
                 ColorPrinter.print(bcolors.OKGREEN, "Correcta: "+bcolors.WARNING + pregunta.respuestas[i-1]+bcolors.ENDC)
         marks.pregunta()
+    index = modoIndex.next_index()
 
 print(marks.puntuacion())
 print("Adios")
